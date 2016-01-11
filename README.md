@@ -1,8 +1,8 @@
-# Basejump: Timestamp Microservice
+# Basejump: File Metadata Microservice
 
-The full stack javaScript app related to the *Basejump: Timestamp Microservice*.
+The full stack javaScript app related to the *Basejump: File Metadata Microservice*.
 
-http://www.freecodecamp.com/challenges/basejump-timestamp-microservice
+http://www.freecodecamp.com/challenges/basejump-file-metadata-microservice
 
 ## Installation
 
