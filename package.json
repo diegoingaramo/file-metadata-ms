@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
+  "scripts": {
     "start": "node index.js"
   },
-    "dependencies": {
-    "express": "4.13.3"
+  "dependencies": {
+    "express": "4.13.3",
+    "multer": "^1.1.0"
   },
   "author": "diegoingaramo",
   "license": "MIT"

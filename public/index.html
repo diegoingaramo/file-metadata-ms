@@ -9,7 +9,7 @@
     </p>
 
     <form id="file-form" enctype="multipart/form-data">
-        <input type="file" name="the-file" />
+        <input type="file" name="the-file" id="file"/>
         <input type="submit" value="Upload" />
     </form>
 
@@ -17,21 +17,14 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            var files;
-
-            $('input[type=file]').on('change', function() {
-                files = event.target.files;
-            });
-
             $('form').on('submit', function(event) {
 
                 event.stopPropagation();
                 event.preventDefault();
 
                 var data = new FormData();
-                $.each(files, function(key, value) {
-                    data.append(key, value);
-                });
+
+                data.append("userFile", $( '#file' )[0].files[0]);
 
                 $.ajax({
                     url: window.location.origin + '/api/fileanalyse/',
@@ -44,7 +37,7 @@
                         alert('ERRORS: ' + textStatus);
                     },
                     success: function(data) {
-                        alert('FILE SIZE: ' + data.fileSize);
+                        alert('FILE SIZE (in bytes): ' + data.file.size);
                     }
                 });
             });
